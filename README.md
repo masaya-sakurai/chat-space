@@ -23,7 +23,7 @@ Things you may want to cover:
 
 * ...
 
-## messagesテーブル
+## messagesテーブル
 |Column|Type|Options|
 |------|----|-------|
 |id|integer|null: false, foreign_key: true|
@@ -32,25 +32,25 @@ Things you may want to cover:
 |user_id|integer|null: false, foreign_key: true|
 |group_id|integer|null: false, foreign_key: true|
 
-### Association
-- belongs_to :group
-- belongs_to :user
+### Association
+- belongs_to :group
+- belongs_to :user
 
 
 
-## usersテーブル
+## usersテーブル
 |Column|Type|Options|
 |------|----|-------|
 |id|integer|null: false, foreign_key: true|
 |user_name|string|null: false, foreign_key: true|
 
-### Association
-- has_many :groups, through: :groups_users
-- has_many :messages
+### Association
+- has_many :groups, through: :groups_users
+- has_many :messages
 
 
 
-## groupsテーブル
+## groupsテーブル
 |Column|Type|Options|
 |------|----|-------|
 |id|integer|null: false, foreign_key: true|
@@ -58,8 +58,8 @@ Things you may want to cover:
 |user_id|integer|null: false, foreign_key: true|
 
 ### Association
-- has_many :messages
-- has_many :users, through: :groups_users
+- has_many :messages
+- has_many :users, through: :groups_users
 
 
 
@@ -70,7 +70,7 @@ Things you may want to cover:
 |group_id|integer|null: false, foreign_key: true|
 
 ### Association
-- belongs_to :group
-- belongs_to :user
+ - belongs_to :group
+ - belongs_to :user
 
 
