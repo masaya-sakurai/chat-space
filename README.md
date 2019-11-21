@@ -63,7 +63,7 @@ Things you may want to cover:
 
 
 
-## groups_usersテーブル
+## users_groupsテーブル
 |Column|Type|Options|
 |------|----|-------|
 |user_id|integer|null: false, foreign_key: true|
