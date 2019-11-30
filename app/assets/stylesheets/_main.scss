@@ -82,8 +82,7 @@
         height: 40px;
         width: 90%;
         border-style: none;
-        margin-top: 5px;
-        margin-left: 0px;
+        margin: 5px 0 0 0;
       }
       .form__file {
         visibility: hidden;
@@ -96,16 +95,14 @@
     .fa-image{
       height: 50px;
       font-size: 30px;
-      margin-top: 10px;
-      margin-right: 10px;
+      margin: 10px 0 0 10px ;
       cursor: pointer;
     }
     .btn{
       width: 100px;
       height: 50px;
       padding: 0 30px;
-      margin-left: 15px;
-      margin-right: 0px;
+      margin: auto 15px 0px;
       background-color: #38aef0;
       color: white;
       cursor: pointer;
