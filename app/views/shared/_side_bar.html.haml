@@ -1,0 +1,20 @@
+.sidebar
+  .sidebar__header
+    .sidebar__header--block
+      %h3.sidebar__header--block--p
+        = current_user.name
+      .sidebar__header--block--icon
+        = link_to new_group_path do
+          = icon('fas','edit',class: 'icon')
+
+        = link_to edit_user_path(current_user) do
+          = icon('fas','cog',class: 'icon')
+
+  .sidebar__body
+    .sidebar__body--block
+      - current_user.groups.each do |group|
+        = link_to link_to group_messages_path(group) do
+          .sidebar__body--block--title
+            = group.name
+        .sidebar__body--block--p
+          飼いたい
