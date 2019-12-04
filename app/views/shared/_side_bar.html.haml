@@ -13,8 +13,8 @@
   .sidebar__body
     .sidebar__body--block
       - current_user.groups.each do |group|
-        = link_to link_to group_messages_path(group) do
+        = link_to group_messages_path(group) do
           .sidebar__body--block--title
             = group.name
         .sidebar__body--block--p
-          飼いたい
+          = group.show_last_message

@@ -2,25 +2,22 @@
   .main__header
     .main__header--left
       .main__header--left--groupname
-        猫について語る会
-      .main__header--left--member
-        Member: 太郎
+        = @group.name
+      %ul.main__header--left--members
+        Member: 
+        %li.member
+          - @group.group_users.each do |group_user|
+            = group_user.user.name
     .main__header--ligft
       .main__header--ligft--edit
-        = link_to "Edit", "#"
+        = link_to "Edit", edit_group_path(@group), class:"edit"
   .main__body
-    .main__body--text
-      .main__body--text--mamber
-        太郎
-      .main__body--text--date
-        2019/11/29:11:20
-    .main__body--text--massage
-      猫カフェじゃ物足りない
+    = render @messages
   .main__form
-    .main__form--mask
-      %form{:action => "#", :method => "post"}
-      %input.text_area{:type => "text", :placeholder => "massage"}
-      %label{class: "form__image"}
-        = icon('fas', 'image')
-        %input{class: "form__file",type: "file"}
-    %input.btn{:type => "submit", :value => "Send"}
+    .form__mask
+      = form_for [@group, @message] do |f|
+        = f.text_field :content, class: 'text_area', placeholder: 'type a message'
+        = f.label :image, class: 'form__mask__image' do
+          = f.file_field :image, class: 'form__file'
+        = icon('fas', 'image', class: 'form__image')
+        = f.submit 'Send', class: 'btn'
