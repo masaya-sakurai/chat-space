@@ -1,0 +1,10 @@
+.main__body--text
+  .main__body--text--mamber
+    = message.user.name
+  .main__body--text--date
+    = message.created_at.strftime("%Y/%m/%d %H:%M")
+.main__body--text--massage
+  - if message.content.present?
+    %p.main__body--text--massage__content
+      = message.content
+  = image_tag message.image.url, class: 'lower-message__image' if message.image.present?
