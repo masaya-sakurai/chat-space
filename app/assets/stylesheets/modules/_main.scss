@@ -1,6 +1,6 @@
 .main{
   width: calc(100% - 300px);
-  height: 960px;
+  height: 100%;
   &__header{
     padding: 0 40px;
     height: 100px;
@@ -37,16 +37,16 @@
         right: 40px;
         a{
         text-decoration: none;
+        color: #38aef0;
         }
       }
     }
   }
   &__body{
-    height: calc(100vh - 190px);
+    height: calc(100% - 282px);
     padding: 46px 40px;
     background-color: #fafafa;
     overflow: scroll;
-    height: 678px;
     &--text{
       display: flex;
       margin-bottom: 10px;
@@ -63,60 +63,44 @@
     &--massage{
       font-size: 14px;
       color: #434A54;
+      padding-bottom: 46px;
       }
     }
   }
-  &__form{
-    height: 90px;
-    width: 100%;
-    background-color: #DDDDDD;
-    box-sizing: border-box;
-    padding: 20px 50px 20px 40px;
-    display: flex;
+  &__form {
+    background-color: #ddd;
+    height: 100px;
+    padding-left: 40px;
     position: sticky;
     bottom: 0;
-    &--mask{
-      .new_message{
-        height: 50px;
-        width: 100%;
-        background-color: white;
-        display: flex;
-        justify-content: space-between;
-        .text_area{
-          height: 40px;
-          width: 90%;
-          border-style: none;
-          margin: 5px 0 0 0;
-        }
-        .form__mask__image{
-          .form__file {
-            visibility: hidden;
-          }
-        }
-        .form__image {
-          color: #000;
-          width: 55px;
-          height: 50px;
-          font-size: 30px;
-          margin: 10px 0 0 10px ;
-          cursor: pointer;
-        }
+    &__textarea{
+      padding-left: 10px;
+      margin-top: 25px;
+      font-style: 16px;
+      color: #434A54;
+      height: 50px;
+      line-height: 100px;
+      width: calc(100% - 140px);
+      position: relative;
+    }
+    &__image{
+      position: absolute;
+      right: 155px;
+      line-height: 100px;
+      input{
+        display: none;
       }
     }
-    .fa-image{
+    &__btn{
+      position: absolute;
       height: 50px;
-      font-size: 30px;
-      margin: 10px 0 0 10px ;
-      cursor: pointer;
-    }
-    .btn{
-      width: 100px;
-      height: 50px;
-      padding: 0 30px;
-      margin: auto 15px 0px;
-      background-color: #38aef0;
-      color: white;
-      cursor: pointer;
+      width: 70px;
+      background-color: #38AEF0;
+      color: #FFFFFF;
+      top: 27px;
+      right: 30px;
+      line-height: 50px;
+      text-align: center;
     }
   }
 }
