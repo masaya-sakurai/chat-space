@@ -1,6 +1,6 @@
 .sidebar {
   width: 300px;
-  height: 960px;
+  height: 970px;
   background-color: #2f3e51;
   &__header{
     background-color: #253141;
@@ -21,7 +21,10 @@
       &--icon{
         color:#ffff;
         i{
-          color:#ffff;
+          color: #fff;
+        }
+        a{
+          text-decoration: none;
         }
       }
     }
@@ -33,11 +36,16 @@
       color: #ffff;
       font-weight: bold;
       padding: 0 20px;
+      a{
+        text-decoration: none;
+      }
       &--title{
+        color: #ffff;
         font-size: 15px;
       }
       &--p{
         font-size: 11px;
+        margin-bottom: 40px;
       }
     }
   }

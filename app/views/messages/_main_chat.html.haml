@@ -4,7 +4,7 @@
       .main__header--left--groupname
         = @group.name
       %ul.main__header--left--members
-        Member: 
+        Member:
         %li.member
           - @group.group_users.each do |group_user|
             = group_user.user.name
@@ -13,11 +13,11 @@
         = link_to "Edit", edit_group_path(@group), class:"edit"
   .main__body
     = render @messages
+
   .main__form
-    .form__mask
-      = form_for [@group, @message] do |f|
-        = f.text_field :content, class: 'text_area', placeholder: 'type a message'
-        = f.label :image, class: 'form__mask__image' do
-          = f.file_field :image, class: 'form__file'
-        = icon('fas', 'image', class: 'form__image')
-        = f.submit 'Send', class: 'btn'
+    = form_for [@group, @message] do |f|
+      = f.text_field :content, class: 'main__form__textarea', placeholder: 'type a message'
+      = f.label :image, class: "main__form__image" do
+        = icon('fas','images')
+        = f.file_field :image
+      = f.submit "send", class: "main__form__btn"
