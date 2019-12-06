@@ -14,7 +14,7 @@ $(function(){
                     <p class="main__body--text--massage__content">
                       ${ message.content }
                     </p>
-                    ${insertImage}
+                    <img src="${ message.image }">
                   </div>`
     //メッセージに画像が含まれる場合のHTMLを作る
     } else {
