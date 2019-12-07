@@ -51,12 +51,15 @@ $(function(){
     .done(function(message){
       var html = buildHTML(message);
       $('.main__body').append(html);
-      $('#message_content').val('');
+      $('.new_message')[0].reset();
       $('.main__body').animate({ scrollTop: $('.main__body')[0].scrollHeight});
-      $('.main__form__btn').attr('disabled', false);
     })
     .fail(function(){
       alert("メッセージ送信に失敗しました");
+    })
+    .always(
+      function() {
+        $('.main__form__btn').attr('disabled', false);
     })
   })
 });
