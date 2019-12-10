@@ -12,6 +12,7 @@
     position: sticky;
     top: 0;
     &--block{
+      overflow: scroll;
       display: flex;
       justify-content: space-between;
       width: 100%;
