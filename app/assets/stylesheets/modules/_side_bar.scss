@@ -1,18 +1,15 @@
 .sidebar {
   width: 300px;
-  height: 970px;
   background-color: #2f3e51;
   &__header{
     background-color: #253141;
     height: 100px;
-    margin-bottom: 20px;
     display: flex;
     align-items: center;
     padding: 0 20px;
     position: sticky;
     top: 0;
     &--block{
-      overflow: scroll;
       display: flex;
       justify-content: space-between;
       width: 100%;
@@ -30,23 +27,30 @@
       }
     }
   }
-  &__body{
-    height: 50px;
-    margin-bottom: 40px;
-    &--block{
-      color: #ffff;
-      font-weight: bold;
-      padding: 0 20px;
-      a{
-        text-decoration: none;
-      }
-      &--title{
+  &__scl{
+    overflow: scroll;
+    &__body{
+      height: calc(100% - 100px);
+      overflow: scroll;
+
+      // height: 500px;
+
+      &--block{
+        height: 50px;
         color: #ffff;
-        font-size: 15px;
-      }
-      &--p{
-        font-size: 11px;
-        margin-bottom: 40px;
+        font-weight: bold;
+        padding: 20px;
+        a{
+          text-decoration: none;
+        }
+        &--title{
+          color: #ffff;
+          font-size: 15px;
+        }
+        &--p{
+          font-size: 11px;
+          margin-bottom: 40px;
+        }
       }
     }
   }

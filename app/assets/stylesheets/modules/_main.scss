@@ -43,10 +43,10 @@
     }
   }
   &__body{
-    height: calc(100% - 282px);
+    overflow: scroll;
+    height: calc(100% - 292px);
     padding: 46px 40px;
     background-color: #fafafa;
-    overflow: scroll;
     &--text{
       display: flex;
       margin-bottom: 10px;

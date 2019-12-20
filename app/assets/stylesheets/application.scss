@@ -1,15 +1,13 @@
-
 @import "font-awesome-sprockets";
 @import "./font-awesome";
-// @import "font-awesome";
 @import "config/colors";
 @import "config/font-size";
 @import "config/reset";
 @import "mixins/mixin";
 @import "mixins/vendor_prefix";
-@import "modules/side_bar";
-@import "modules/main";
 @import "modules/user";
 @import "modules/flash";
 @import "modules/group";
+@import "modules/side_bar";
+@import "modules/main";
 @import "messages/messages.scss"
