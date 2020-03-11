@@ -51,9 +51,10 @@ $(function(){
     })
 
     .done(function(message){
+      // console.log(message)
       var html = buildHTML(message);
       $('.main__body').append(html);
-      $('.new_message')[0].reset();
+      $('.new_message').get(0).reset();
       $('.main__body').animate({ scrollTop: $('.main__body')[0].scrollHeight}, "fast");
     })
     .fail(function(){
@@ -61,13 +62,14 @@ $(function(){
     })
     .always(
       function() {
-        $('.main__form__btn').attr('disabled', false);
+        $('.main__form__btn').attr('disabled');
     })
   })
 
   var reloadMessages = function() {
     if (window.location.href.match(/\/groups\/\d+\/messages/)){//今いるページのリンクが/groups/グループID/messagesのパスとマッチすれば以下を実行。
       last_message_id = $('.message').last().data('message-id')
+
       $.ajax({
         url: 'api/messages',
         type: 'get',
@@ -75,6 +77,7 @@ $(function(){
         data: { id: last_message_id }
       })
       .done(function(messages) {
+        // console.log(messages)
         var insertHTML = '';
         messages.forEach(function (message){
           insertHTML = buildHTML(message);
@@ -87,7 +90,7 @@ $(function(){
       });
     }
   }
-      setInterval(reloadMessages, 7000);
+  setInterval(reloadMessages, 7000);
 });
 
 
